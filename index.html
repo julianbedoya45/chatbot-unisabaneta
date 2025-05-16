@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot - Unisabaneta</title>
+  <style>
+    body {
+      background-color: #f0f2f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header img {
+      height: 60px;
+      vertical-align: middle;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #004080;
+      margin-top: 10px;
+    }
+
+    p {
+      color: #333;
+    }
+
+    footer {
+      background-color: #e0e0e0;
+      color: #444;
+      text-align: center;
+      padding: 10px 0;
+      width: 100%;
+      font-size: 0.9em;
+    }
+
+    df-messenger {
+      --df-messenger-bot-message: #e0e0e0;
+      --df-messenger-button-titlebar-color: #004080;
+      --df-messenger-chat-background-color: #ffffff;
+      --df-messenger-font-color: #000;
+      --df-messenger-send-icon: #004080;
+      --df-messenger-user-message: #c8e6c9;
+    }
+  </style>
+
+  <!-- Carga del script de Dialogflow Messenger -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+</head>
+<body>
+
+  <header>
+    <img src="https://media.licdn.com/dms/image/v2/C510BAQEi3UoC7XOU-g/company-logo_200_200/company-logo_200_200/0/1631323899211?e=2147483647&v=beta&t=Hcl316Lujgk8RCJxNh7lrM2vhgEgxmh6ETTPPmNBQUQ" alt="Logo Unisabaneta">
+    <span><strong>Unisabaneta - Chatbot Interactivo</strong></span>
+  </header>
+
+  <main>
+    <h1>Bienvenido al Asistente Virtual</h1>
+    <p>Haz clic en el ícono flotante para interactuar con el chatbot.</p>
+  </main>
+
+  <!-- Widget del chatbot -->
+  <df-messenger
+    intent="WELCOME"
+    chat-title="Bot_Responsive"
+    agent-id="8ca03826-2c09-4370-a69e-79be07550101"
+    language-code="es">
+  </df-messenger>
+
+  <footer>
+    Desarrollado por Julián Bedoya Acosta - Ingeniería Informática - Unisabaneta
+  </footer>
+
+</body>
+</html>
